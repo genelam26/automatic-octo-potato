@@ -53,7 +53,14 @@ age = 20
 def say_hi(name,age):
     print("Hello "+name+","+str(age))
 def cube(num):
-    return num*num*num
-print(cube(3)) # without return statement, you get "None"
+    if (num<-50) or (num>50):
+        return "the num is too large"
+    elif num==0 and num!=50:
+        return 0
+    else:
+        return num*num*num
+# print(cube(51)) # without return statement, you get "None"
+# print(cube(-1))
+# print(cube(0))
 
 
