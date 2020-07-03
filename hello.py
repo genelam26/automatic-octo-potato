@@ -5,6 +5,8 @@
 This is how you comment a block of text
 """
 from math import *  # math is called a module
+import random
+from Student import Student # from (file) impport (class)
 
 def string_input():
     age = 3.14159
@@ -131,4 +133,25 @@ def trycatch():
         print(err)
     except ValueError:
         print("invalid error")
-trycatch()
+# trycatch()
+def fileHandling():
+    path="/Users/genelam/Downloads/copy.txt"
+    file = open(path,"r+")
+    print(file.readable())
+    print(file.writable())
+    #print(file.readlines()) # takes each line and adds it to a list
+    #print(file.readline())
+    for line in file.readlines():
+        print(line)
+    file.write("\n something")
+    for line in file.readlines():
+        print(line)
+    secondfile = open("index.html","w+") #creates index.html
+    secondfile.write("something")
+    secondfile.read()
+    file.read()
+    file.close()
+    secondfile.close()
+# fileHandling()
+student1=Student("Selena","Computer Science and Sociology",4.0,True)
+print(student1.to_String())
