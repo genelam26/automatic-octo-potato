@@ -63,4 +63,72 @@ def cube(num):
 # print(cube(-1))
 # print(cube(0))
 
+# Dictionaries
+monthConversions = {
+    "Jan": "January",
+    "Feb": "February",
+    "Mar": "March",
+    "April": "April",
+    5: "May",
+    6: "June",
+}
+# print(monthConversions["Jan"])
+# print(monthConversions.get(6))
+# print(monthConversions.get(7))
 
+# Loops
+def whileLoop():
+    i=0
+    while i<50:
+        print(i)
+        i+=1
+    print("Done with while loop")
+def forLoop():
+    for letter in "Giraffe Academy":
+        print(letter)
+    friends=["Kim","Karen","Jim"]
+    for friend in friends:
+        print(friend)
+    i=10
+    for j in range(2,i,2):
+        print(j)
+    for index in range(len(friends)):
+        print(index, friends[index])
+    print("Done with for loop")
+# whileLoop()
+# forLoop()
+def power(base,pow_num):
+    power=1
+    for i in range(pow_num):
+        power*=base
+    return power
+#print(power(2,7))
+
+def grid():
+    number_grid = [[1,2,3],[4,5,6,],[7,8,9],[0]]
+    print(number_grid[3][0]) # may get index of bounds error
+    for row in number_grid:
+        for column in row:
+            print(column)
+    print("done")
+# grid()
+def translate(phrase):
+    translation = ""
+    for letter in phrase:
+        if letter in "AEIOUaeiou": # or letter.lower() in "aeiou"
+            translation=translation+"g"
+        else:
+            translation = translation + letter
+    return translation
+# print(translate(input("Enter a phrase")))
+
+def trycatch():
+    try:
+        number=int(input("Enter an integer "))
+        second=int(input("Enter another num "))
+        print(number/second)
+    except ZeroDivisionError as err: # bad practice to have general except: statement.
+        print(err)
+    except ValueError:
+        print("invalid error")
+trycatch()
