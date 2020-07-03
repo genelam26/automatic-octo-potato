@@ -10,4 +10,10 @@ class Student:
             return self.name+" "+self.major+" "+str(self.gpa)+" "+"Honors"
         else:
             return self.name+" "+self.major+" "+str(self.gpa)+" "+"not Honors"
-
+    # inheritance
+    def pay_Tuition(self):
+        print("Paid tuition")
+    def enroll_in_Classes(self):
+        print("enrolled in classes")
+    def dropout(self):
+        print("Dropped out")

@@ -6,7 +6,8 @@ This is how you comment a block of text
 """
 from math import *  # math is called a module
 import random
-from Student import Student # from (file) impport (class)
+from Student import Student # from (file) import (class)
+from Teacher import Teacher
 
 def string_input():
     age = 3.14159
@@ -153,5 +154,11 @@ def fileHandling():
     file.close()
     secondfile.close()
 # fileHandling()
+
+# Objects and Inheritance
 student1=Student("Selena","Computer Science and Sociology",4.0,True)
 print(student1.to_String())
+student1.pay_Tuition()
+teacher1=Teacher("Gene","Computer Engineering",4.0,False)
+print(teacher1.to_String())
+teacher1.pay_Tuition()
