@@ -1,6 +1,6 @@
 # This is how you comment a line of text
 # import os
-# os.system('osascript send.scpt {} "{}"'.format(7188134058, "hi"))
+# os.system('osascript send.scpt {} "{}"'.format(number, "message"))
 """
 This is how you comment a block of text
 """
